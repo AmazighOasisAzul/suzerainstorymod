@@ -7,7 +7,7 @@ This document records verified technical information about modifying Suzerain.
 The official **Suzerain Modding Kit (SMK)** documentation and its maintained `DecisionExample` project establish this project's current implementation path:
 
 - Suzerain mods are C# .NET 6 class libraries loaded by MelonLoader.
-- The supported path is the Steam version of Suzerain on Windows or Linux through Proton.
+- The current project target is the Steam version of Suzerain on Windows. Linux is out of scope for this mod even though SMK itself also documents Proton support.
 - A mod identifies itself with `MelonInfo` and `MelonGame` assembly attributes and extends `MelonMod`.
 - SMK exposes `Events.OnEvaluateStep`, `Events.OnDecisionShow`, and `Events.OnDecisionFinished` for a custom decision.
 - `Variables.Register` registers persistent custom state, and `GameState.AddCustomStoryFragment` adds a `CustomDecisionFragment`.
@@ -41,6 +41,10 @@ No in-game test has been performed or claimed.
 3. Build the project using the `Debug`/`x64` configuration. When the `Mods` directory exists, the project copies its DLL there after a successful build.
 
 The project fails clearly if `GamePath` has not been supplied, rather than silently compiling against unknown assemblies.
+
+## Android boundary
+
+Android is a future target, but it is not a build output of this C# project. The Android game is an IL2CPP APK and needs its own compatible integration and testing workflow. Do not use a third-party repackaged APK as the baseline for Android development. The separate requirements are recorded in `docs/PLATFORMS.md`.
 
 ## Localization boundary
 

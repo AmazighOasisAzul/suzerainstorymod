@@ -23,6 +23,10 @@ The repository is establishing the project's documentation, content structure, l
 
 Nothing in this repository should be assumed to work in-game until it has been tested against the target Suzerain build.
 
+## Platform scope
+
+The mod targets **Windows (Steam PC)** and **Android** only. Linux and macOS are out of scope. These are separate technical targets: the existing C# MelonLoader project is Windows-only, while Android requires a distinct Unity IL2CPP integration. See [platform scope](docs/PLATFORMS.md) for the compatibility gates and current status.
+
 ## Planned content
 
 ### Story expansion
@@ -101,7 +105,8 @@ suzerainstorymod/
 │   ├── DESIGN.md
 │   ├── ROADMAP.md
 │   ├── LOCALIZATION.md
-│   └── MODDING.md
+│   ├── MODDING.md
+│   └── PLATFORMS.md
 ├── content/
 │   ├── story/
 │   ├── events/
