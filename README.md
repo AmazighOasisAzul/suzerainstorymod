@@ -193,7 +193,7 @@ Contributions are welcome once the technical foundation is established. See [CON
 
 ## Disclaimer
 
-This is an unofficial community project and is not affiliated with or endorsed by the creators or publishers of Suzerain.
+This is an unofficial independent mod and is not affiliated with or endorsed by the creators or publishers of Suzerain.
 
 ## License
 
