@@ -43,6 +43,10 @@ Run `tools/Test-Localization.ps1` from the repository root to compare all curren
 
 The current JSON catalogs are source assets. They do not yet connect to a documented runtime localization API in SMK; that adapter will be added only after it is verified against the target game and Kit version.
 
+## Completion gate
+
+The project completes translations per content unit before treating that unit as ready for further implementation or release. See `localization/STATUS.md` for the required language order, audited coverage, and definition of complete. At present, the Civic Listening Tour is the only written content unit and is complete in every target locale.
+
 ## Quality checks
 
 A localization build should check for:
