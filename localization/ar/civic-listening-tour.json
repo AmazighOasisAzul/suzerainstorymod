@@ -1,0 +1,8 @@
+{
+  "decision.civic_listening_tour.title": "جولة للاستماع إلى المواطنين",
+  "decision.civic_listening_tour.description": "يقترح مستشاروك جولة في أنحاء الجمهورية للاستماع إلى شواغل المواطنين قبل تحديد جدول السياسات المقبل.",
+  "decision.civic_listening_tour.hub_title": "جولة للاستماع إلى المواطنين",
+  "decision.civic_listening_tour.hub_description": "هل ينبغي للإدارة أن تبدأ جولة استماع؟",
+  "decision.civic_listening_tour.option.authorize": "الموافقة على جولة استماع على مستوى البلاد.",
+  "decision.civic_listening_tour.option.defer": "تأجيل المقترح في الوقت الراهن."
+}

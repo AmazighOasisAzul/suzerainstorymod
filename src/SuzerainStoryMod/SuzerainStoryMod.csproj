@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Platforms>x64</Platforms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>SuzerainStoryMod</AssemblyName>
+    <RootNamespace>SuzerainStoryMod</RootNamespace>
+    <!-- Set this in a local Directory.Build.props; do not commit a machine-specific Steam path. -->
+    <GamePath Condition="'$(GamePath)' == ''"></GamePath>
+  </PropertyGroup>
+
+  <Target Name="RequireGamePath" BeforeTargets="ResolveReferences" Condition="'$(GamePath)' == ''">
+    <Error Text="Set GamePath to your Suzerain install folder (for example in a local Directory.Build.props). See docs/MODDING.md." />
+  </Target>
+
+  <ItemGroup>
+    <Reference Include="SuzerainModdingKit">
+      <HintPath>$(GamePath)\Mods\SuzerainModdingKit.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>$(GamePath)\MelonLoader\net6\MelonLoader.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="CopyToMods" AfterTargets="Build" Condition="Exists('$(GamePath)\Mods')">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GamePath)\Mods" />
+  </Target>
+</Project>

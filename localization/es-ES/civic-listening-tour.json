@@ -1,0 +1,8 @@
+{
+  "decision.civic_listening_tour.title": "Una gira de escucha ciudadana",
+  "decision.civic_listening_tour.description": "Tus asesores proponen una gira por la república para escuchar las preocupaciones de la ciudadanía antes de fijar la próxima agenda política.",
+  "decision.civic_listening_tour.hub_title": "Una gira de escucha ciudadana",
+  "decision.civic_listening_tour.hub_description": "¿Debe la administración iniciar una gira de escucha?",
+  "decision.civic_listening_tour.option.authorize": "Autorizar una gira de escucha por todo el país.",
+  "decision.civic_listening_tour.option.defer": "Aplazar la propuesta por ahora."
+}

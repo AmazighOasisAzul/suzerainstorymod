@@ -17,7 +17,7 @@ The goal is to expand the political roleplaying experience without losing the wr
 
 ## Current status
 
-**Early development.**
+**Early development — SMK scaffold added; not yet tested in-game.**
 
 The repository is establishing the project's documentation, content structure, localization framework, and development workflow. Game-specific implementation will be added as the game's actual files, runtime, and modding interface are mapped and tested.
 
@@ -108,6 +108,8 @@ suzerainstorymod/
 │   ├── decisions/
 │   ├── characters/
 │   └── codex/
+├── src/
+│   └── SuzerainStoryMod/       # C# MelonLoader + SMK project
 ├── localization/
 │   ├── en/
 │   ├── es-ES/
@@ -120,7 +122,7 @@ suzerainstorymod/
 │   ├── ja/
 │   └── ko/
 ├── fixes/
-└── tools/
+└── tools/                      # Local validation scripts
 ```
 
 This structure is intentionally content-first. Once the game's actual modding format is verified, implementation-specific directories can be introduced without restructuring the entire project.

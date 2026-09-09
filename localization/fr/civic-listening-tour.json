@@ -1,0 +1,8 @@
+{
+  "decision.civic_listening_tour.title": "Une tournée d'écoute citoyenne",
+  "decision.civic_listening_tour.description": "Vos conseillers proposent une tournée à travers la république afin d'écouter les préoccupations de la population avant de définir le prochain programme politique.",
+  "decision.civic_listening_tour.hub_title": "Une tournée d'écoute citoyenne",
+  "decision.civic_listening_tour.hub_description": "L'administration doit-elle entreprendre une tournée d'écoute ?",
+  "decision.civic_listening_tour.option.authorize": "Autoriser une tournée d'écoute nationale.",
+  "decision.civic_listening_tour.option.defer": "Reporter la proposition pour le moment."
+}

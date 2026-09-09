@@ -1,0 +1,8 @@
+{
+  "decision.civic_listening_tour.title": "市民の声を聞く旅",
+  "decision.civic_listening_tour.description": "次の政策課題を定める前に、共和国各地を巡って市民の懸念を聞くことを顧問たちが提案しています。",
+  "decision.civic_listening_tour.hub_title": "市民の声を聞く旅",
+  "decision.civic_listening_tour.hub_description": "政権は聞き取りの旅を始めるべきでしょうか？",
+  "decision.civic_listening_tour.option.authorize": "全国規模の聞き取りの旅を承認する。",
+  "decision.civic_listening_tour.option.defer": "この提案は当面見送る。"
+}

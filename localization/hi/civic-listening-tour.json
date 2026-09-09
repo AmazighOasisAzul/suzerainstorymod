@@ -1,0 +1,8 @@
+{
+  "decision.civic_listening_tour.title": "नागरिक संवाद यात्रा",
+  "decision.civic_listening_tour.description": "आपके सलाहकार अगला नीतिगत एजेंडा तय करने से पहले नागरिकों की चिंताएँ सुनने के लिए पूरे गणराज्य की यात्रा का प्रस्ताव रखते हैं।",
+  "decision.civic_listening_tour.hub_title": "नागरिक संवाद यात्रा",
+  "decision.civic_listening_tour.hub_description": "क्या प्रशासन को संवाद यात्रा शुरू करनी चाहिए?",
+  "decision.civic_listening_tour.option.authorize": "देशव्यापी संवाद यात्रा को मंजूरी दें।",
+  "decision.civic_listening_tour.option.defer": "प्रस्ताव को अभी के लिए टाल दें।"
+}

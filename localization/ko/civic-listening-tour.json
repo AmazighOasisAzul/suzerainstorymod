@@ -1,0 +1,8 @@
+{
+  "decision.civic_listening_tour.title": "시민 경청 순회",
+  "decision.civic_listening_tour.description": "보좌진은 다음 정책 의제를 정하기 전에 공화국 전역을 돌며 시민들의 우려를 듣자고 제안합니다.",
+  "decision.civic_listening_tour.hub_title": "시민 경청 순회",
+  "decision.civic_listening_tour.hub_description": "행정부가 경청 순회를 시작해야 할까요?",
+  "decision.civic_listening_tour.option.authorize": "전국 시민 경청 순회를 승인한다.",
+  "decision.civic_listening_tour.option.defer": "이 제안은 당분간 미룬다."
+}

@@ -1,0 +1,8 @@
+{
+  "decision.civic_listening_tour.title": "Поездка для диалога с гражданами",
+  "decision.civic_listening_tour.description": "Ваши советники предлагают объехать республику и выслушать заботы граждан до определения следующей политической повестки.",
+  "decision.civic_listening_tour.hub_title": "Поездка для диалога с гражданами",
+  "decision.civic_listening_tour.hub_description": "Следует ли администрации начать поездку для диалога?",
+  "decision.civic_listening_tour.option.authorize": "Одобрить общенациональную поездку для диалога.",
+  "decision.civic_listening_tour.option.defer": "Пока отложить это предложение."
+}

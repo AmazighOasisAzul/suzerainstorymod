@@ -9,17 +9,15 @@ Localization is a core part of the project, not a final optional patch. The firs
 | Code | Language | Status |
 |---|---|---|
 | `en` | English | Source |
-| `es` | Spanish | Planned |
-| `zh-CN` | Simplified Chinese | Planned |
-| `hi` | Hindi | Planned |
-| `ar` | Arabic | Planned |
-| `pt-BR` | Brazilian Portuguese | Planned |
-| `ru` | Russian | Planned |
-| `ja` | Japanese | Planned |
-| `de` | German | Planned |
-| `fr` | French | Planned |
-| `it` | Italian | Planned |
-| `ko` | Korean | Planned |
+| `es-ES` | European Spanish | Starter catalog complete |
+| `fr` | French | Starter catalog complete |
+| `eo` | Esperanto | Starter catalog complete |
+| `zh-CN` | Simplified Chinese | Starter catalog complete |
+| `ar` | Arabic | Starter catalog complete |
+| `ru` | Russian | Starter catalog complete |
+| `hi` | Hindi | Starter catalog complete |
+| `ja` | Japanese | Starter catalog complete |
+| `ko` | Korean | Starter catalog complete |
 
 ## Rules
 
@@ -29,6 +27,21 @@ Localization is a core part of the project, not a final optional patch. The firs
 - New source keys should be reported before translation begins.
 - Removed or renamed keys should be tracked so obsolete translations can be detected.
 - Machine translation may assist drafting, but final releases require human review for political terminology, names, tone, and consistency.
+
+## Catalog layout and mapping
+
+Each locale has a JSON catalog for a content unit, for example:
+
+```text
+localization/en/civic-listening-tour.json
+localization/es-ES/civic-listening-tour.json
+```
+
+English (`en`) is the canonical key set. A content unit records its localization namespace in its content document; the first decision does so in `content/decisions/civic-listening-tour.md` and uses `decision.civic_listening_tour.*`. Every translated catalog must have exactly the English catalog's keys. Keep keys stable after publication; change the value, not the identifier.
+
+Run `tools/Test-Localization.ps1` from the repository root to compare all current catalogs against the English source and reject missing, extra, empty, or malformed entries.
+
+The current JSON catalogs are source assets. They do not yet connect to a documented runtime localization API in SMK; that adapter will be added only after it is verified against the target game and Kit version.
 
 ## Quality checks
 

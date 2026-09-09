@@ -1,0 +1,8 @@
+{
+  "decision.civic_listening_tour.title": "A Civic Listening Tour",
+  "decision.civic_listening_tour.description": "Your advisers propose a tour of the republic to hear concerns before the next policy agenda is set.",
+  "decision.civic_listening_tour.hub_title": "A Civic Listening Tour",
+  "decision.civic_listening_tour.hub_description": "Should the administration begin a listening tour?",
+  "decision.civic_listening_tour.option.authorize": "Authorize a nationwide listening tour.",
+  "decision.civic_listening_tour.option.defer": "Defer the proposal for now."
+}

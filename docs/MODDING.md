@@ -2,24 +2,53 @@
 
 This document records verified technical information about modifying Suzerain.
 
-## Verification status
+## Verified development foundation
 
-**Not yet established:**
+The official **Suzerain Modding Kit (SMK)** documentation and its maintained `DecisionExample` project establish this project's current implementation path:
 
-- Target game version
-- Story data format
-- Event/decision format
-- Codex data format
-- Localization format
-- Runtime or executable architecture relevant to mod loading
-- Required mod loader/framework
-- Packaging and installation format
+- Suzerain mods are C# .NET 6 class libraries loaded by MelonLoader.
+- The supported path is the Steam version of Suzerain on Windows or Linux through Proton.
+- A mod identifies itself with `MelonInfo` and `MelonGame` assembly attributes and extends `MelonMod`.
+- SMK exposes `Events.OnEvaluateStep`, `Events.OnDecisionShow`, and `Events.OnDecisionFinished` for a custom decision.
+- `Variables.Register` registers persistent custom state, and `GameState.AddCustomStoryFragment` adds a `CustomDecisionFragment`.
+- SMK's currently documented target Suzerain build is `3.1.0.1.175`; the installed game must be checked before compatibility is claimed.
 
-These must be determined from the actual game files and tested before engine-specific implementation is committed.
+The repository's first implementation is `src/SuzerainStoryMod`. It follows the documented decision-example structure and adds the isolated **Civic Listening Tour** fragment at Sordland turn 1, step 2. The code is intentionally limited to APIs demonstrated in the official example.
+
+### Deliberately not yet verified
+
+- The local target game version and installation path
+- A successful DLL build against the user's installed game assemblies
+- In-game loading and behavior
+- A supported SMK API for loading localization catalogs or switching text by the game's selected language
+- Story, Codex, and base-game localization data formats
+
+No in-game test has been performed or claimed.
+
+## Local setup and build
+
+1. Install MelonLoader and place `SuzerainModdingKit.dll` in the game's `Mods` directory, following the official SMK installation guide.
+2. Create an untracked `src/SuzerainStoryMod/Directory.Build.props` containing the installed game's path:
+
+```xml
+<Project>
+  <PropertyGroup>
+    <GamePath>C:\Program Files (x86)\Steam\steamapps\common\Suzerain</GamePath>
+  </PropertyGroup>
+</Project>
+```
+
+3. Build the project using the `Debug`/`x64` configuration. When the `Mods` directory exists, the project copies its DLL there after a successful build.
+
+The project fails clearly if `GamePath` has not been supplied, rather than silently compiling against unknown assemblies.
+
+## Localization boundary
+
+SMK's public guides document direct string parameters for decisions and dialogue, but do not document a mod-local localization loader. The JSON catalogs under `localization/` are therefore source-controlled translation assets, not a statement that runtime language switching works today. The implementation uses the English source strings until that integration point is verified.
 
 ## First technical milestone
 
-The first implementation milestone is a minimal, reversible modification that changes one known piece of text and can be loaded successfully in the target game.
+The first implementation milestone is a minimal, reversible modification that adds one isolated decision and can be loaded successfully in the target game.
 
 After that milestone, the project can safely build tooling around the real data structures instead of guessing them.
 
