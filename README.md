@@ -1,6 +1,6 @@
 # Suzerain Story Mod
 
-A community-developed story expansion for **Suzerain**.
+A story-expansion mod for **Suzerain**, created by **AmazighOasisAzul with AI-assisted development**.
 
 The goal is to expand the political roleplaying experience without losing the writing, choices, consequences, and institutional focus that define the base game.
 
@@ -8,16 +8,18 @@ The goal is to expand the political roleplaying experience without losing the wr
 
 - Add additional turns and extend campaigns beyond the existing story.
 - Add new decisions, dialogue, events, interactions, and text options.
+- **Dream goal:** create an interactive text-response system where players can type their own responses instead of being limited to predefined choices, with the game interpreting the player's response and answering through its collected game/world information while preserving the game's political context and state.
 - Expand the Codex with additional countries, institutions, political concepts, characters, events, and historical context.
+- Use the **Suzerain updated world map** concept as the project's intended world-map reference: [Reddit world map reference](https://www.reddit.com/r/suzerain/comments/1tgzvwu/world_map_suzerain_updated_version/#lightbox).
 - Fix bugs, inconsistencies, broken text, and other issues discovered during development.
-- Expand localization beyond English, prioritizing major world languages with large player populations.
+- Expand localization beyond English, prioritizing only the world's major languages rather than small-language localization.
 - Build the project in a maintainable structure so story content, Codex entries, fixes, and translations can be developed independently.
 
 ## Current status
 
 **Early development.**
 
-The repository is currently establishing the project's documentation, content structure, localization framework, and development workflow. Game-specific implementation will be added once the exact runtime/modding interface and supported game version are confirmed.
+The repository is establishing the project's documentation, content structure, localization framework, and development workflow. Game-specific implementation will be added as the game's actual files, runtime, and modding interface are mapped and tested.
 
 Nothing in this repository should be assumed to work in-game until it has been tested against the target Suzerain build.
 
@@ -50,6 +52,15 @@ Planned categories include:
 - Organizations and factions
 - Laws and constitutional concepts
 - International relations
+- World-map and geopolitical information
+
+### World map
+
+The project intends to use the updated Suzerain world-map concept referenced here as a visual and geographical foundation:
+
+https://www.reddit.com/r/suzerain/comments/1tgzvwu/world_map_suzerain_updated_version/#lightbox
+
+The exact technical implementation will depend on how the game handles its existing map assets and UI.
 
 ### Bug fixes and corrections
 
@@ -57,9 +68,28 @@ The mod will maintain a dedicated record of confirmed issues and fixes. Correcti
 
 ### Localization
 
-Localization will prioritize major global languages first. Initial planning targets include English, Spanish, Chinese (Simplified), Hindi, Arabic, Portuguese, Russian, Japanese, German, French, Italian, and Korean.
+Localization is deliberately limited to **major world languages**. The initial priority is based on the writing system and global importance of the language, not an attempt to support every language.
 
-Language support will be added according to the actual technical capabilities of the game's text system and the availability of translators.
+#### Immediate Latin-script translations
+
+The first Latin-script translation targets are:
+
+1. **European Spanish**
+2. **French**
+3. **Esperanto**
+
+#### Major non-Latin-script languages
+
+After the immediate Latin-script targets, localization will expand to major languages using other writing systems, including:
+
+- **Mandarin Chinese (Simplified)**
+- **Arabic**
+- **Russian**
+- **Hindi**
+- **Japanese**
+- **Korean**
+
+Additional major world languages may be added if they meet the project's scope, but the project is not intended to become a comprehensive small-language localization project.
 
 ## Repository structure
 
@@ -80,16 +110,14 @@ suzerainstorymod/
 │   └── codex/
 ├── localization/
 │   ├── en/
-│   ├── es/
-│   ├── zh-CN/
-│   ├── hi/
-│   ├── ar/
-│   ├── pt-BR/
-│   ├── ru/
-│   ├── ja/
-│   ├── de/
+│   ├── es-ES/
 │   ├── fr/
-│   ├── it/
+│   ├── eo/
+│   ├── zh-CN/
+│   ├── ar/
+│   ├── ru/
+│   ├── hi/
+│   ├── ja/
 │   └── ko/
 ├── fixes/
 └── tools/
@@ -121,11 +149,20 @@ This structure is intentionally content-first. Once the game's actual modding fo
 
 - [x] Create repository
 - [x] Establish project README
-- [ ] Document confirmed game version and modding/runtime method
-- [ ] Map relevant base-game files and data structures
+- [ ] Identify the exact target Suzerain version
+- [ ] Map the game's story files and data structures
+- [ ] Determine the mod loading/patching method
 - [ ] Establish a repeatable testing workflow
 
-### Phase 2 — Content framework
+### Phase 2 — First working modification
+
+- [ ] Extract and inspect an existing story event
+- [ ] Reproduce one existing event in the project's working format
+- [ ] Modify one existing text/choice as a controlled test
+- [ ] Verify the modified content in-game
+- [ ] Document the working mod installation method
+
+### Phase 3 — Story framework
 
 - [ ] Implement the first additional turn
 - [ ] Implement the first new decision/event chain
@@ -133,15 +170,16 @@ This structure is intentionally content-first. Once the game's actual modding fo
 - [ ] Establish localization source format
 - [ ] Add automated validation where practical
 
-### Phase 3 — Expansion
+### Phase 4 — Expansion
 
 - [ ] Expand the additional-turn system
 - [ ] Add substantial new story content
 - [ ] Expand Codex coverage
-- [ ] Implement the first major bug fixes
-- [ ] Begin major-language translations
+- [ ] Implement major bug fixes
+- [ ] Begin the priority localization sequence
+- [ ] Research feasibility of player-written responses
 
-### Phase 4 — Testing and release
+### Phase 5 — Testing and release
 
 - [ ] Full campaign testing
 - [ ] Localization testing
